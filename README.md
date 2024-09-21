@@ -3,7 +3,7 @@
 ## Virtualization and Cloud Computing Project by Group 1
 #### Roll Nos: G23AI2050 (Vanshika Gupta), G23AI2059 (Aneerban Choewdhury), G23AI2075 (Shikha Soni)
 
-##### Link to Project: https://vcc-group1-2050-59-75.as.r.appspot.com/predict
+##### Link to Project: https://vcc-group1-2050-59-75.as.r.appspot.com
 
 This project segments customers based on their income and expense percentage using K-Means clustering. The model is deployed via a Flask application and hosted on Google Cloud Platform (GCP) App Engine.
 
