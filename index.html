@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorising Customer Spend Pattern</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 70px;
+            background-color: aquamarine;
+            
+        }
+        .form-container {
+            max-width: 700px;
+            margin: 50;
+            padding: 10px;
+            border: 5px solid #3f2892;
+            border-radius: 5px;
+            background-color: bisque;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .form-container input[type="submit"] {
+            background-color: #44529a;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .form-container input[type="submit"]:hover {
+            background-color: #2a9341;
+        }
+        .result {
+            font-size: 1.5em;
+            color: #e8350c;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1><center>Categorising Customer Spend Pattern</center></h1>
+        <form action="/predict" method="post">
+            <label for="Annual_Income">Income:</label>
+            <input type="number" name="Annual_Income" id="Annual_Income" required>
+
+            <label for="Spending_Score">Expenses:</label>
+            <input type="number" name="Spending_Score" id="Spending_Score" required>
+
+            <input type="submit" value="Find Customer Category">
+        </form>
+        {% if prediction_text %}
+        <div class="result">{{ prediction_text }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
